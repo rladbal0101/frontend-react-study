@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flex box</title>
+  <title>Flex_box</title>
 
   <style>
     .container {
       background-color: royalblue;
 
-      /* 블록 요소는 기본적으로 수직으로 쌓이는데 수평 정렬 하고 싶다면?
+      /* 블록 요소는 기본적으로 수직으로 쌓이는데 수평 정렬하고 싶다면?
         => 수평 정렬하고자 하는 요소들의 부모 요소에 display: flex;
       */
       display: flex;
@@ -22,7 +22,6 @@
       background-color: orange;
     }
 
-    /* display */
     .parent {
       height: 200px;
       background-color: royalblue;
@@ -53,12 +52,10 @@
     .parent.d-flex + .parent.d-flex {
       margin-top: 20px;
     }
-
     .parent.d-inline-flex + .parent.d-inline-flex {
       margin-left: 20px;
     }
-    
-    /* flex-direction */
+
     .flex-row {
       flex-direction: row;
     }
@@ -100,7 +97,7 @@
   <div class="parent d-flex">
     <div class="child-1"></div>
     <div class="child-2"></div>
-    <div class="child-3"></div>  
+    <div class="child-3"></div>
   </div>
 
   <!-- Flex Items의 정렬 방향을 설정 -->
@@ -110,28 +107,28 @@
   <div class="parent d-flex flex-row">
     <div class="child-1">1</div>
     <div class="child-2">2</div>
-    <div class="child-3">3</div>  
+    <div class="child-3">3</div>
   </div>
 
   <h2>row-reverse: 우에서 좌로 역방향</h2>
   <div class="parent d-flex flex-row-reverse">
     <div class="child-1">1</div>
     <div class="child-2">2</div>
-    <div class="child-3">3</div>  
+    <div class="child-3">3</div>
   </div>
 
   <h2>column: 위에서 아래로 정방향</h2>
   <div class="parent d-flex flex-column">
     <div class="child-1">1</div>
     <div class="child-2">2</div>
-    <div class="child-3">3</div>  
+    <div class="child-3">3</div>
   </div>
 
   <h2>column-reverse: 아래에서 위로 역방향</h2>
   <div class="parent d-flex flex-column-reverse">
     <div class="child-1">1</div>
     <div class="child-2">2</div>
-    <div class="child-3">3</div>  
+    <div class="child-3">3</div>
   </div>
 </body>
 </html>

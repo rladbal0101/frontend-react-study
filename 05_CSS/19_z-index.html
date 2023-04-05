@@ -21,9 +21,8 @@
       height: 150px;
       background-color: orange;
 
-      /* position: static; */
-      z-index: 999; /* 위치 기준이 없을 때는 의미 없음(static일때) */
       position: relative;
+      z-index: 999; /* 위치 기준이 없을 때는 의미 없음 */
     }
     .child-2 {
       width: 350px;
@@ -47,7 +46,7 @@
     }
 
     /* z-index: 요소의 쌓임 정도 지정, 숫자가 높을수록 위에 쌓임 */
-    /* (중요) position 속성의 값(static 제외)이 같이 있어야 의미가 있고, Flex Item에서도 사용 가능 */
+    /* (중요) position 속성의 값(static 제외)이 같이 있어야 의미가 있고, Flex Items에서도 사용 가능 */
     /* 주로 슬라이드 메뉴, 드롭다운, 모달창이나 로딩창, 백그라운드 비활성화 영역 등에 사용 */
 
     span {
@@ -58,7 +57,7 @@
 
       /* 변화 없음 */
       /* position: relative; */
-      
+
       /* display 속성이 block으로 변경됨 */
       /* position: absolute; */
       position: fixed;
@@ -98,5 +97,5 @@
 
   Q4: display 속성이 block의 값으로 바뀌지 않는 position 속성의 값은?
     1) absolute  2) relative  3) fixed
-  A4: 2
+  A4: 2)
 -->
