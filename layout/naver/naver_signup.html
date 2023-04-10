@@ -15,7 +15,9 @@
     <div class="top">
       <!-- h1(강조의 의미) 또는 div를 사용해도 상관없음 -->
       <h1 class="logo">
-        <a href="">로고 자리</a>
+        <a href="#">
+          <img src="https://ssl.pstatic.net/static/nid/join/m_logo_naver.png" alt="네이버 로고">
+        </a>
       </h1>
     </div>
   </header>
@@ -72,23 +74,23 @@
         </select>
         <input type="text" id="dd" name="dd" placeholder="일" class="birth-date placeholder-hidden">
         <!-- <input type="number" min="1" max="31" placeholder="일" maxlength="2"> -->
+        <div class="label-margin">
+          <label for="gender">성별</label>
+        </div>
+        <select name="gender" id="gender">
+          <option value="" selected>성별</option>
+          <option value="M">남자</option>
+          <option value="F">여자</option>
+          <option value="U">선택안함</option>
+        </select>
+  
+        <div class="label-margin">
+          <label for="email">본인 확인 이메일
+            <span class="">(선택)</span>
+          </label>
+        </div>
+        <input type="email" id="email" name="email" placeholder="선택입력">
       </div>
-      <div class="label-margin">
-        <label for="gender">성별</label>
-      </div>
-      <select name="gender" id="gender">
-        <option value="" selected>성별</option>
-        <option value="M">남자</option>
-        <option value="F">여자</option>
-        <option value="U">선택안함</option>
-      </select>
-
-      <div class="label-margin">
-        <label for="email">본인 확인 이메일
-          <span class="">(선택)</span>
-        </label>
-      </div>
-      <input type="email" id="email" name="email" placeholder="선택입력">
             
       <!-- input 들을 그룹으로 묶음: 세번째 그룹 -->
       <div class="input-group">
@@ -124,10 +126,31 @@
     <!-- 가운데 정렬을 위한 inner div -->
     <div class="bottom">
       <div class="bt-menu">
-        하단 메뉴 자리
+        <ul>
+          <li>
+            <a href="#">이용약관</a>
+          </li>
+          <li>
+            &nbsp;|&nbsp;
+            <a href="#">개인정보처리방침</a>
+          </li>
+          <li>
+            &nbsp;|&nbsp;
+            <a href="#">책임의 한계와 법적고지</a>
+          </li>
+          <li>
+            &nbsp;|&nbsp;
+            <a href="#">회원정보</a>
+          </li>
+          <li>
+            &nbsp;|&nbsp;
+            <a href="#">고객센터</a>
+          </li>
+        </ul>
       </div>
+      <!-- 카피라이트 -->
       <div class="copyright">
-        카피라이트 자리
+        &copy; Copyright NAVER Corp. All Rights Reserved.
       </div>
     </div>
   </footer>
