@@ -188,31 +188,30 @@
     //   });
 
     // 리팩터링
-    console.log(loginUser());
+    // 답안 (정답, try/catch 확인해보기)
+    // console.log(loginUser());
 
-    async function login() {
-      const res = await loginUser(id, password);
-      console.log(res); // goni
-      const res2 = await getRoles(res);
-      alert(`Welcome ${res2.name} (${res2.role})~!`);
-      console.log('로그인 성공!');
-
-    }
-    login();
+    // async function login() {
+    //   const res = await loginUser(id, password);
+    //   console.log(res); // goni
+    //   const res2 = await getRoles(res);
+    //   alert(`Welcome ${res2.name} (${res2.role})~!`);
+    //   console.log('로그인 성공!');
+    // }
+    // login();
     
-    async function fail() {
+
+    // 풀이
+    const loginAndGetRoles = async (id, password) => { // async () 빈괄호여도 되지만 나중에 작업할 때 한 파일로 몰아놓고 코드를 불러올때를 대비해 괄호 안에 변수명을 작성함
       try {
-        const loginInfo = await loginUser('ip');
-        console.log(loginInfo);
-        if (loginInfo) {
-          
-        }
-        
+        const userId = await loginUser(id, password);
+        const userInfo = await getRoles(userId);
+        alert(`Welcome ${userInfo.name} (${userInfo.role})~!`);
       } catch (err) {
         console.error(err);
       }
-    }
-    fail();
+    };
+    loginAndGetRoles(id, password); // 
 
   </script>
 </head>
