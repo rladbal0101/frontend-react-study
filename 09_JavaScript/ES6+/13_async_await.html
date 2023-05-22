@@ -176,18 +176,44 @@
     const password = prompt('비밀번호를 입력하세요.');
 
     // Quiz 여기부터 바꾸면 됨!!!
-    loginUser(id, password)
-      .then(userId => { // 로그인이 성공하면 그러면
-        return getRoles(userId); // userId 값을 통해 권한 정보를 얻는 getRoles() 호출
-      })
-      .then(userInfo => { // 권한 정보를 얻어오면 그러면
-        alert(`Welcome ${userInfo.name} (${userInfo.role})`);
-      })
-      .catch(err => { // 에러 핸들링
-        console.error(err);
-      });
+    // loginUser(id, password)
+    //   .then(userId => { // 로그인이 성공하면 그러면
+    //     return getRoles(userId); // userId 값을 통해 권한 정보를 얻는 getRoles() 호출
+    //   })
+    //   .then(userInfo => { // 권한 정보를 얻어오면 그러면
+    //     alert(`Welcome ${userInfo.name} (${userInfo.role})`);
+    //   })
+    //   .catch(err => { // 에러 핸들링
+    //     console.error(err);
+    //   });
 
+    // 리팩터링
     console.log(loginUser());
+
+    async function login() {
+      const res = await loginUser(id, password);
+      console.log(res); // goni
+      const res2 = await getRoles(res);
+      alert(`Welcome ${res2.name} (${res2.role})~!`);
+      console.log('로그인 성공!');
+
+    }
+    login();
+    
+    async function fail() {
+      try {
+        const loginInfo = await loginUser('ip');
+        console.log(loginInfo);
+        if (loginInfo) {
+          
+        }
+        
+      } catch (err) {
+        console.error(err);
+      }
+    }
+    fail();
+
   </script>
 </head>
 <body>
