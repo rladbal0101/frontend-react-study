@@ -20,9 +20,15 @@
 		// document.write(menu[menuNum]);
 
     // 답안
-
-    // 풀이2@
+    const menu = ['짜장면', '돈가스', '된장국', '김치찌개', '회덮밥'];
+    const menuNum = Math.floor(Math.random() * menu.length);
+    document.write(`오늘의 메뉴는? <br> ${menu[menuNum]}`);
     
+    // 풀이2
+    // const menu = ['짜장면', '돈가스', '된장국', '김치찌개', '회덮밥'];
+		// const menuNum = Math.floor(Math.random() * 5); // 0이상 5미만의 랜덤한 정수값(0~4)
+		// const menuNum = Math.floor(Math.random() * menu.length); // 0이상 5미만의 랜덤한 정수값(0~4)
+		// document.write(menu[menuNum]);
   </script>
 </head>
 <body>

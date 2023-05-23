@@ -17,8 +17,21 @@
     const arr = [];
 
     // 답안
+    // for (let i = 0; i < arrLength; i++) {
+    //   arr[i] = prompt ('배열에 추가');
+    // }
+    // document.write(arr);
 
     // 풀이5
+    for (let i = 0; i < arrLength; i++) {
+      // arr.push(prompt('배열에 넣을 데이터를 입력하세요.'));
+      arr[i] = prompt('배열에 넣을 데이터를 입력하세요.');
+    }
+
+    if (arr.length > 0) {
+      document.write(arr.shift(), '<br>');
+      document.write(arr.pop(), '<br>');
+    }
     
   </script>
 </head>

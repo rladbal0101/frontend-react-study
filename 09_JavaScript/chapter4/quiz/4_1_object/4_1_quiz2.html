@@ -16,10 +16,23 @@
     // 단, 객체의 속성 값을 얻기 위해 점 표기법(.)과 대괄호 표기법([])을 골고루 사용해 볼 것!
 
     
-    // 답안
-
     // 풀이2
-    
+    const person = {
+      name: 'Yumi',
+      age: 30,
+      gender: '여자',
+      hobby: ['등산', '러닝', '피아노'],
+      speak: function () {
+        document.write(this.name + '가 말을합니다. 아아~');
+      }
+    };
+    document.write('<h1>person 객체 출력</h1>');
+    document.write(person.name, '<br>');
+    document.write(person.age, '<br>');
+    document.write(person['gender'], '<br>');
+    document.write(person['hobby'], '<br>');
+    person.speak();
+
   </script>
 </head>
 <body>

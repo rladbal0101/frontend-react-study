@@ -15,10 +15,33 @@
     const lottoArr = []; // 빈 배열
     
     // 답안
+    // for (let i = 0; i < 6; i++) {
+    //   console.log(Math.floor(Math.random() * 45) + 1);
+    // }
+    // lottoArr.sort();
+    // console.log(lottoArr);
 
     // 풀이6
+    while (lottoArr.length < 6) {
+      const randomNum = Math.floor(Math.random() * 45) + 1;
+      if (!lottoArr.includes(randomNum)) {
+        lottoArr.push(randomNum);
+      }
+    }
+    document.write(lottoArr.sort(function (a, b) { return a - b; }), '<br>');
     
-    
+    // 풀이6-2
+    // for문 사용
+    const lottoArr2 = []; // 빈 배열
+    for (let i = 0; i < 6;) {
+    // for (; lottoArr2.length < 6;) {
+      const randomNum = Math.floor(Math.random() * 45) + 1;
+      if (!lottoArr2.includes(randomNum)) {
+        lottoArr2.push(randomNum);
+        i++;
+      }
+    }
+    document.write(lottoArr2.sort(function (a, b) { return a - b; }), '<br>');    
   </script>
 </head>
 <body>

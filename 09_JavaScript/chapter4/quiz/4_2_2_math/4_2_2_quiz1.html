@@ -11,9 +11,18 @@
     // 1~45까지의 랜덤한 정수값 6개 출력
 
     // 답안
+    // const number = [Math.floor((Math.random() * 46) + 1)];
+    // console.log(number);
+    // for (let i = 1; i <= 6; i++) {
+    //   number.push(number[i]);
+    // }
+    // document.write(`추첨번호는 ${number}`);
 
     // 풀이1
     // 공식화: Math.floor(Math.random() * (최대값 - 최소값 + 1)) + 최소값;
+    for (let i = 0; i < 6; i++) {
+      document.write(Math.floor(Math.random() * 45) + 1, ' ');
+    }
     
   </script>
 </head>
