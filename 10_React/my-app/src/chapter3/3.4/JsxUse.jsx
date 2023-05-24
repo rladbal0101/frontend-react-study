@@ -1,4 +1,5 @@
-// import React from "react";
+import React from "react";
+import './JsxUse.css'; // css파일 가져오기
 
 function JsxUse() {
   // JSX의 사용법(문법)
@@ -18,7 +19,7 @@ function JsxUse() {
   // );
 
   // 2. 꼭 감싸져야만 하는 태그
-  // 두개 이상의 태그는 무조건 하나의 태그로 감싸져있어야 함
+  // 두개 이상의 태그는 무조건 하나의 태그로 감싸져 있어야 함
   // const element = (
   //   // <div>안녕하세요.</div>
   //   // <div>안녕히계세요.</div>
@@ -58,16 +59,56 @@ function JsxUse() {
     return `${user.firstName} ${user.lastName}`;
   };
 
-  const element = (
-    <>
-      <div>{name} 배우기</div>
-      <h1>Hello, {formatName(user)}</h1>
-    </>
+  // const element = (
+  //   <>
+  //     <div>{name} 배우기</div>
+  //     <h1>Hello, {formatName(user)}</h1>
+  //   </>
 
+  // );
+
+  // 4. style과 className
+  // 인라인 스타일은 객체 형태로 작성하는데 background-color처럼 -로 구분되어 있는 이름은 camelCase 형태로 네이밍
+  // (예: background-color -> backgroundColor)
+  // class 값 설정할 때는 class="" 가 아닌 className="" 로 설정
+  // const style = {
+  //   backgroundColor: 'black',
+  //   color: 'aqua',
+  //   fontSize: 24, // 기본 단위 px
+  //   padding: '1rem' // 다른 단위 사용 시 문자열로 설정
+  // };
+
+  // const element = (
+  //   <>
+  //     <div style={style}>리액트 공부하기</div>
+  //     <div className="gray-box"></div>
+  //   </>
+  // );
+  
+
+  // 5. JSZ 주석
+  // JSX 내부의 주석은 JS 여러줄 주석을 중괄호로 감싼 형태
+  // {/* 이런 형태 */}
+  // JS 주석은 우리가 아는 그대로 사용
+  const element = (
+  <>
+    {/* 주석은 화면에 보이지 않습니다. */}
+    // 주석은 화면에 보이지 않습니다.
+    /* 주석은 화면에 보이지 않습니다.*/
+
+    <div
+      // 열리는 태그 내부에서는 이렇게 주석 작성 
+    >
+      주석 테스트
+    </div>
+  </>
+  
   );
 
   return element;
+  
 }
+
 
 export default JsxUse; // JsxUse 컴포넌트 내보내기
 // export를 해줘야 다른곳에서 import 해서 사용 가능
