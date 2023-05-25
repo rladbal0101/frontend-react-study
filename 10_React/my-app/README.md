@@ -29,3 +29,7 @@ React 개발 환경이 적용된 React 프로젝트를 자동으로 생성해주
 
   > npm start
   package.json 파일 Debug 부분에 scripts가 start 된다
+
+  # 크롬 웹스토어
+  React Developer Tools 설치
+  개발자 도구 Components 탭에서 컴포넌트 분석 가능
