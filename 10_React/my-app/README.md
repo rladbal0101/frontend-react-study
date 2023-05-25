@@ -22,7 +22,7 @@ React 개발 환경이 적용된 React 프로젝트를 자동으로 생성해주
   pull 받은 후 
   terminal 창에
   > cd 10_React\my-app(진행 프로젝트)
-  > npm install (경로 확인 후 my_app(진행 프로젝트) 내에서 install)
+  > npm install (경로 확인 후 my-app(진행 프로젝트) 내에서 install)
   (처음 작업을 시작할때/새로운 패키지를 설치할 경우에만 하면 됨)
   설치가 끝나면 node_modules 폴더가 생김
   (npm install 은 package.json 파일이 있는 곳에서만 실행 됨 -> dependencies의 목록을 보고 설치 하기 때문)
