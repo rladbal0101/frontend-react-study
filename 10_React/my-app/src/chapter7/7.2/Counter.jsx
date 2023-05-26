@@ -54,7 +54,7 @@ function Counter() {
 
       {/* Quiz: 버튼 내용 바꾸기 */}
       {/* <button type="button" onClick={() => setFinish('마감')}> */}
-      <button type="button" onClick={() => setFinish(true)} disabled={finish}>
+      <button type="button" onClick={() => setFinish(true)} disabled={finish}> {/* disabled 비활성화 */}
         {/* {finish} */}
         {finish ? '마감' : '신청'} {/* JSX 내부에서는 if문을 사용할 수 없으므로 삼항 연산자를 이용 */}
       </button>

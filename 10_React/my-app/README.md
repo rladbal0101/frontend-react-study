@@ -33,3 +33,11 @@ React 개발 환경이 적용된 React 프로젝트를 자동으로 생성해주
   # 크롬 웹스토어
   React Developer Tools 설치
   개발자 도구 Components 탭에서 컴포넌트 분석 가능
+
+  # Extensions 설치
+  - Reactjs code snippets
+  - Simple React Snippets
+  => 단축키 사용
+   rsf→	stateless named function skeleton
+   usf→	Declare a new state variable using State Hook
+  - 직접 snippets 만들어서 사용가능

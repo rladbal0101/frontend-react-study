@@ -14,6 +14,14 @@ import NotificationList from './chapter6/NotificationList';
 import Counter from './chapter7/7.2/Counter';
 import SetStateMerge from './chapter7/7.2/SetStateMerge';
 import CounterEffect from './chapter7/7.3/ex1/CounterEffect';
+import EffectSummary from './chapter7/7.3/ex3/EffectSummary';
+import EffectContainer from './chapter7/7.3/ex3/EffectContainer';
+import TimerContainer from './chapter7/7.3/ex4/TimerContainer';
+import Toggle from './chapter8/8.1/Toggle';
+import MyButton from './chapter8/8.2/MyButton';
+import ConfirmButton from './chapter8/ConfirmButton';
+import Greeting from './chapter9/9.1/Greeting';
+import LoginControl from './chapter9/9.2/LoginControl';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // Root DOM Node에 렌더링 하도록 하는 함수
@@ -24,11 +32,48 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   // </React.StrictMode>
 // );
 
-// 3장 예제
-// root.render(
-//   // <JsxUse />
-//   <Library />
-// );
+root.render(
+  // 3장 예제
+  // <JsxUse />
+  // <Library />
+
+  // 5장 예제
+  // <PropsUse />
+  // 5.6 CommentEx 적용하려면
+  // <CommentEx 
+  //   author= {
+  //     {
+  //       name: "aaa",
+  //       avatarUrl: 
+  //     }
+  //   }
+  // />
+  // <CommentList />
+
+  // 6장 예제
+  // <NotificationList />
+
+  // 7장 예제
+  // 7.2
+  // <Counter />
+  // <SetStateMerge />
+  // 7.3
+  // <CounterEffect />
+  // <EffectSummary />
+  // <EffectContainer />
+  // <TimerContainer />
+
+  // 8장 예제
+  // <Toggle />
+  // <MyButton />
+  // <ConfirmButton />
+
+  // 9장 예제
+  // <Greeting isLoggedIn={true} />
+  <LoginControl />
+
+);
+
 
 // 4장 예제
 // 1초마다 Clock 컴포넌트를 렌더링 하는 코드
@@ -39,38 +84,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   );
 // }, 1000);
 
-// 5장 예제
-// root.render(
-//   <PropsUse />
-
-//   // 5.6 CommentEx 적용하려면
-//   // <CommentEx 
-//   //   author= {
-//   //     {
-//   //       name: "aaa",
-//   //       avatarUrl: 
-//   //     }
-//   //   }
-//   // />
-
-//   // <CommentList />
-// );
-
-// 6장 예제
-// root.render (
-//   <NotificationList />
-// );
-
-// 7장 예제
-root.render (
-  // 7.2
-  // <Counter />
-  // <SetStateMerge />
-  
-  // 7.3
-  <CounterEffect />
-
-);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
