@@ -30,14 +30,22 @@ React 개발 환경이 적용된 React 프로젝트를 자동으로 생성해주
   > npm start
   package.json 파일 Debug 부분에 scripts가 start 된다
 
-  # 크롬 웹스토어
+# 크롬 웹스토어
   React Developer Tools 설치
   개발자 도구 Components 탭에서 컴포넌트 분석 가능
 
-  # Extensions 설치
+# Extensions 설치
   - Reactjs code snippets
   - Simple React Snippets
   => 단축키 사용
    rsf→	stateless named function skeleton
    usf→	Declare a new state variable using State Hook
   - 직접 snippets 만들어서 사용가능
+
+# 새 프로젝트 만들기
+  - 프로젝트 생성 위치 찾아가기 >cd 폴더명
+  - npx create-react-app 프로젝트명
+  프로젝트 생성 후
+  - 해당 폴더에서 npm start
+  
+  > 새 프로젝트를 만든 후 package.json 확인해보기
