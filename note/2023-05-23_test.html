@@ -10,19 +10,19 @@
     // 이때 설정한 사용자 정보는 커밋(버전 생성)을 만드는데 사용됩니다.
     // 사용자 정보 등록을 위한 명령어를 작성해보세요.
 
-    // 답안
+    // 답안 [점수 5/10]
     // git config --global user.name "your name"
 
 
     // [문항2] 모든 파일의 변경사항을 추적하도록 지정하고 stage(index) 영역에 올리는 명령어를 작성해보세요
 
-    // 답안
+    // 답안 [점수 5/10]
     // git status
     // git add '파일명'
 
     // [문항3] '로그인 기능 추가' 라는 커밋메시지로 커밋을 만드는 명령어를 작성해보세요.
 
-    // 답안
+    // 답안 [점수 10/10]
     // git add login.html
     // git commit -m "로그인 기능 추가"
 
@@ -30,7 +30,7 @@
     // [문항4] backup 이라는 별칭으로 아래 원격 저장소를 연결하는 명령어를 작성해보세요.
     // https://github.com/abcdef/frontend_backup.git
 
-    // 답안
+    // 답안 [점수 5/10]
     // git commit -m "backup"
     // git remote add origin https://github.com/abcdef/frontend_backup.git
     // git push -u origin main
@@ -38,26 +38,31 @@
 
     // [문항5] origin 이라는 별칭의 원격 저장소로 로컬 main 브랜치의 커밋 내역을 전송(업로드)하는 명령어를 작성해보세요.
 
-    // 답안
+    // 답안 [점수 5/10]
     // git remote add origin
     // git pull origin main
 
 
     // [문항6] 아래 함수 선언문을 화살표 함수로 리팩터링 하세요.
-    const val = 1;
     function hello(val) {
       return 'Hello ' + val;
     }
     
-    // 답안
+    // 답안 [점수 3/10]
     console.log(hello(val));
     // function hello((val) => {
     //   return `Hello ${val}`
     // });
 
-//     function hello(val) => {
-//   return `Hello ${val}`;
-// }
+    //     function hello(val) => {
+    //    return `Hello ${val}`;
+    // }
+
+    // 다시 풀어보기
+    const hello = (val) => {
+      return `Hello ${val}`;
+    };
+
 
     // [문항7] 아래 함수 선언문을 화살표 함수로 리팩터링 하세요.
     // map(): 기존 배열의 요소를 이용하여 새로운 배열을 만듦
@@ -73,7 +78,7 @@
     });
     console.log(results);
 
-    // 답안
+    // 답안 [점수 10/10]
     // const results = runners.map((runner, index) => {
     //   return {
     //     name: runner,
@@ -90,7 +95,7 @@
     const hobby = 'badminton';
     const greeting = 'Hello my name is ' + name + '. I\'m ' + age + ' years old. My hobby is playing ' + hobby + '.';
 
-    // 답안
+    // 답안 [점수 10/10]
     const greeting2 = `Hello my name is ${name}. I\'m ${age} years old. My hobby is playing ${hobby}.`;
     console.log(greeting);
     console.log(greeting2);
@@ -109,7 +114,7 @@
     };
     const {  } = action; // 여기에서부터 채워나가세요.
 
-    // 답안
+    // 답안 [점수 10/10]
     const { type } = action;
     const { payload } = action;
     const { id, title, content, done } = action.payload;
@@ -138,7 +143,7 @@
     }
     console.log(universityMajor);
     
-    // 답안
+    // 답안 [점수 10/10]
     universityMajor = person.education?.university?.major;
     console.log(universityMajor);
 
@@ -150,7 +155,7 @@
     };
     console.log(userInfo);
     
-    // 답안
+    // 답안 [점수 10/10]
     const userInfoCopy = {...userInfo};
     userInfoCopy.email = 'geoblo@naver.com';
     console.log(userInfoCopy);
@@ -161,7 +166,7 @@
     // 배열의 map() 함수 사용
     const moneyList = [2000000, 240000, 3000000, 1500];
 
-    // 답안
+    // 답안 [점수 10/10]
     const newMoneyList = moneyList.map((money) => {
       return money / 10;
     });
@@ -186,7 +191,7 @@
       { id: 'a5', name: 'Noni', age: 45 }
     ];
 
-    // 답안
+    // 답안 [점수 3/10]
     const inputId = prompt('삭제할 아이디 입력하세요');
     const deleteMember = [];
     // console.log(members.indexOf(inputId));
