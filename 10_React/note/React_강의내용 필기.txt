@@ -298,3 +298,43 @@ JSX 내부에서의 조건부 렌더링
   - 실무에서 잘 사용안함 -> 보통 "Redux"라는 전역상태 라이브러리 사용(면접에 나올수 있으니 알고 넘어가기!)
 
   @ 예제 14 DarkOrLight - 테마 변경(다크/라이트)
+
+#230605
+15. styled-components
+  : CSS in JS(JS 안에서 CSS 사용할 수 있는 기술)
+  : CSS 문법을 그대로 사용하면서 결과물을 스타일링 된 컴포넌트 형태로 만들어주는 라이브러리
+  - 컴포넌트 개념을 사용하기 때문에 리액트랑 궁합이 잘맞음
+  - 백틱을 사용하여 구성 요소의 스타일을 지정(vscode-styled-components 익스텐션 설치 필요!)
+
+  @ 예제 chapter15 StyledPage 참고!
+  0. styled-components 설치하기
+  * npm을 사용하는 경우
+  npm install styled-components
+  (npm install styled-components@5.3.11)-최신버전 에러로 인해 직전 버전 설치
+  (설치 확인해보려면 package.json 확인)
+
+  @ 예제 chapter15 theme
+  styled-components의 theme Provider를 통해 지정해놓은 값을 가져와 사용할 수 있음
+
+7장
+7.5 useCallback()
+  : 값이 아닌 함수를 반환함
+    최적화와 관련된 Hook
+  • 사용법
+    - const 함수명 = useCallback(콜백 함수, 의존성 배열);
+    - 의존성 배열에 들어있는 변수가 변했을 경우에만 콜백 함수를 다시 정의해서 리턴함
+
+  useCallback() 안에 넣으면 컴포넌트가 마운트 될 때 한번만 함수가 정의됨
+  - memoization: 자주 사용되는 것을 메모리에 정의해두고 필요할 때 꺼내 쓰는 것
+  - props로 전달해야 할 함수를 만들 때는 useCallback()을 사용해본다!
+  - (중요) 리액트에서는 기본적으로 부모 컴포넌트가 렌더링되면 모든 자식 컴포넌트들도 무조건 렌더링 된다!
+  - 이 때 React.memo()를 사용하면 props의 변경이 없을 경우 렌더링을 막아준다. (useCallback()과 React.memo(); 함께 사용)
+  ! 상위 컴포넌트에서 전달하는 함수에 useCallback()을 쓰면 props로 전달되는 함수가 새로 정의되지 않기때문에 props의 변경이 없으므로 재렌더링 발생 안함
+  
+  * React.memo가 필요할 때?
+  1) 컴포넌트가 같은 props로 자주 렌더링 될 때
+  2) 컴포넌트가 렌더링 될 때마다 복잡한 로직(연산)을 처리해야 할 때 (props의 변경이 있으면 당연히 렌더링되어야 함)
+
+#새 프로젝트 시작(my-todo)
+패키지 설치
+npm install styled-components styled-reset react-icons
