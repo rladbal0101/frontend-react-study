@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import PostDetail from './components/PostDetail';
+import PostListItem from './components/PostListItem';
 
 // POST앱 CRUD 만들기
 // C: Create(등록)
@@ -52,6 +53,7 @@ function App() {
         </div> */}
 
         {/* Quiz: map()을 이용하여 posts 반복 출력하기 */}
+        
         {posts.map((post, index) => {
           return (
             <div key={index} className="list"
