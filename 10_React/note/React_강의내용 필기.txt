@@ -372,13 +372,28 @@ npm install styled-components styled-reset react-icons
   (꼭 위와 같이 쓰라고 정해진 규칙이 있는것은 아님)
 
   URL 파라미터 예시: https://vibe.naver.com/album/9732422 (네이버 바이브)
+  (9732422는 id값(id값은 ))
   쿼리스트링 예시: /articles?**page=1&keyword=react (네이버 검색)
-
+                          ? 물음표로 시작
 <AboutPage>
 : 쿼리스트링 사용 페이지
 - {location.search} (예전 내용 참고 4_3_bom.html > 2) location 객체 > 쿼리스트링)
  : 이 문자열 앞에 있는 ?를 지우고, &로 분리한뒤 key와 value를 파싱하는 작업이 필요했는데 현재는 useSearchParams() 훅을 이용하여 간편하게 작업
 
 <NoMatchPage>
- : 설정한 라우팅 경로 이외에 경우 보여줄 페이지는 => *
+ : 설정한 라우팅 경로 이외에 경우 보여줄 페이지 경로 => *
   <Route path='*' /> // *의 의미는 match anything
+
+#230608
+#새 프로젝트 시작(my-blog)
+  note.md 참고
+
+[export와 export default의 차이]
+- export:
+  파일 1개에서 여러번 사용 가능
+  import시 {}로 받아와야 하고 네임이 일치해야 됨
+- export default:
+  파일 1개당 하나만 사용 가능
+  import시 변수명을 내가 지을 수 있다.
+
+* 모던 JavaScript 튜토리얼에서 깊이 있는 공부 가능(https://ko.javascript.info/)
