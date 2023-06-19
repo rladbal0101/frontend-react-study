@@ -399,9 +399,12 @@ npm install styled-components styled-reset react-icons
 * 모던 JavaScript 튜토리얼에서 깊이 있는 공부 가능(https://ko.javascript.info/)
 
 #230619
-17. Ajax
+17. Axios
  : Promise 기반 HTTP 요청 라이브러리
  : 서버에 데이터 요청
   서버에 정해놓은 규격대로 보내야 됨
 @ chapter17 ApiRequest
   JSONPlaceholder (https://jsonplaceholder.typicode.com/) 참고
+  - Ajax
+
+#새 프로젝트 시작(my-news)
