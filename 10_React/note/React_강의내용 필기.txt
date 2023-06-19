@@ -397,3 +397,11 @@ npm install styled-components styled-reset react-icons
   import시 변수명을 내가 지을 수 있다.
 
 * 모던 JavaScript 튜토리얼에서 깊이 있는 공부 가능(https://ko.javascript.info/)
+
+#230619
+17. Ajax
+ : Promise 기반 HTTP 요청 라이브러리
+ : 서버에 데이터 요청
+  서버에 정해놓은 규격대로 보내야 됨
+@ chapter17 ApiRequest
+  JSONPlaceholder (https://jsonplaceholder.typicode.com/) 참고
