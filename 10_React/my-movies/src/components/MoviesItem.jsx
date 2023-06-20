@@ -10,17 +10,25 @@ const MoviesItemBlock = styled.div`
   }
 
   .contents {
-    display: flex;
     align-items: baseline;
     
-    h2 {
-      font-size: 18px;;
-      margin-right: 10px;
+    .title {
+      display: flex;
 
-      a {
-        color: black;
+      h2 {
+        font-size: 18px;;
+        margin-right: 10px;
+  
+        a {
+          color: black;
+          
+          &:hover {
+            color: #22b8cf;
+          }
+        }
       }
     }
+    
 
     p {
       font-size: 14px;
@@ -30,16 +38,23 @@ const MoviesItemBlock = styled.div`
 `;
 
 function MoviesItem({ movie }) {
-  const { movieNm, openDt, rank } = movie;
+  const { movieNm, openDt, rank, audiAcc } = movie;
+  // console.log(audiAcc);
+  const audiAccString = [audiAcc].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   
   return (
     <MoviesItemBlock>
       <div className='contents'>
-        <h2>{rank}위</h2>
-        <h2>
-          <a href="" target='_blank'>{movieNm}</a>
-        </h2>
-        <p>개봉일 : {openDt}</p>
+        <div className='title'>
+          <h2>{rank}위</h2>
+          <h2>
+            <a href="#" target='_blank'>{movieNm}</a>
+          </h2>
+        </div>
+        <div>
+          <p>개봉일 : {openDt}</p>
+          <p>누적관객수 : {audiAccString}명</p>
+        </div>
       </div>
     </MoviesItemBlock>
   );
