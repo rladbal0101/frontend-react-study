@@ -4,35 +4,42 @@ import styled from "styled-components";
 
 const MoviesItemBlock = styled.div`
   display: flex;
+  
+  & + & {
+    margin-top: 20px;
+  }
 
   .contents {
+    display: flex;
+    align-items: baseline;
+    
     h2 {
-      margin: 0;
+      font-size: 18px;;
+      margin-right: 10px;
+
       a {
         color: black;
       }
     }
 
     p {
-      margin: 0;
-      line-height: 1.5;
-      margin-top: 0.5rem;
+      font-size: 14px;
       white-space: normal;
     }
   } 
 `;
 
-function MoviesItem({ movieList }) {
-  const { movieNm, prdtYear, repGenreNm } = movieList;
-
+function MoviesItem({ movie }) {
+  const { movieNm, openDt, rank } = movie;
+  
   return (
     <MoviesItemBlock>
       <div className='contents'>
+        <h2>{rank}위</h2>
         <h2>
           <a href="" target='_blank'>{movieNm}</a>
         </h2>
-        <p>{prdtYear}</p>
-        <p>{repGenreNm}</p>
+        <p>개봉일 : {openDt}</p>
       </div>
     </MoviesItemBlock>
   );
