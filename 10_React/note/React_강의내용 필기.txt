@@ -408,3 +408,7 @@ npm install styled-components styled-reset react-icons
   - Ajax
 
 #새 프로젝트 시작(my-news)
+#연습 프로젝트 시작(my-movies)
+
+#230620
+18. Redux
