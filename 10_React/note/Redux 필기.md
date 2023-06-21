@@ -12,9 +12,6 @@ Redux Store라는 저장소에 state를 저장할 수 있음
 사용법(문법)이 좀 더 쉬워짐
 Redux 개발팀에서 Redux 표준은 RTK를 쓰라고 권장함
 
-Redux Toolkit and React-Redux 설치하기
-npm install @reduxjs/toolkit react-redux
-
 만약에 카운터의 state가 여기저기 컴포넌트에서 공유가 필요하다면 어디에 만들어야할까?
 공통 부모에 만들고 props로 자식에게 전달해야 됨(state 끌어올리기)
 
@@ -39,6 +36,8 @@ Q. Redux 쓰면 편한데 props 쓸 필요가 있을까?
 별 수정 없이 반복적으로 사용되는 코드, 소위 말하는 찍어내는 코드
 Redux가 어려운 점은 이런 보일러 플레이트 코드의 작성이 매우 많음(=> RTK로 넘어오면서 획기적으로 줄어듦)
 
+# redux essential
+홈페이지에 그림 참고
 
 # Redux 사용법
 1. Redux Store 만들기 <store.js>
@@ -72,6 +71,7 @@ state 초기값으로 원시값, 배열, 객체 등 모든 데이터 타입 사�
     현재 state와 action 객체를 파라미터로 받아오고 필요한 경우 상태를 업데이트하고 새 상태를 반환하는 함수
 
   카피본을 만들어 수정해야하지만 Redux에서는 직접 수정 가능!
+  - 만든 slice를 export 해야함
 
 4. Redux Store에 Slice Reducers를 추가하기 <store.js>
   Slice Reducers를 State에 등록을 해야 컴포넌트들이 전역 state를 사용 가능
@@ -79,12 +79,13 @@ state 초기값으로 원시값, 배열, 객체 등 모든 데이터 타입 사�
 5. 리액트 컴포넌트에서 Redux Store와 Actions 사용하기 <Counter.js>
   # useSelector()
   : Redux Store에 있는 state를 가져오는 함수
-  # useDispatch()
-  : Redux Store에 요청을 보내주는 함수
 
-- 전역 상태를 업데이트하는 유일한 방법
+  # useDispatch()
+  : Redux Store에 요청을 보내주는 함수(dispatch 변수에 담아 사용)
+  - 전역 상태를 업데이트하는 유일한 방법
   # dispatch()
   : 액션 객체를 스토어에 보내는 함수
   -> 스토어는 해당 액션에 매칭되는 리듀서 함수를 실행시켜서 새로운 상태를 만들어줌
-  #  decrememt() 함수
+
+  # decrememt() 함수
   : 액션 (객체) 생성 함수

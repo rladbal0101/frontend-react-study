@@ -313,6 +313,19 @@ JSX 내부에서의 조건부 렌더링
   (npm install styled-components@5.3.11)-최신버전 에러로 인해 직전 버전 설치
   (설치 확인해보려면 package.json 확인)
 
+  1. 기본적인 사용법
+  - 스타일링된 컴포넌트 형태로 반환됨
+  2. props 사용하기
+  - 컴포넌트 형태라 props 사용이 가능(최고 장점 중 하나)
+  3. & 문자를 사용하여 자기 자신 선택 가능
+  4. 여러 줄의 스타일 구문을 조건부로 설정해야 하는 경우 css를 불러와 사용
+  5. 스타일 확장(커스텀) 하기
+  - 기존에 만들어놓은 컴포넌트를 사용할 땐 . 대신 ()
+  - 예: const 새컴포넌트 = styled(기존 컴포넌트)``;
+  6. 반응형 디자인
+  - 일반 CSS를 사용할 때와 같이 media 쿼리를 사용 가능
+  - 리액트스럽게 react-responsive 라이브러리 사용
+
   @ 예제 chapter15 theme
   styled-components의 theme Provider를 통해 지정해놓은 값을 가져와 사용할 수 있음
 
@@ -412,3 +425,8 @@ npm install styled-components styled-reset react-icons
 
 #230620
 18. Redux
+Redux Toolkit and React-Redux 설치하기
+> npm install @reduxjs/toolkit react-redux
+
+#230621
+#새 프로젝트 시작(my-shop)

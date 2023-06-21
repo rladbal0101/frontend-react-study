@@ -9,27 +9,38 @@ function ProductList(props) {
 
   const [product, setProduct] = useState('');
 
+  const handleAddProduct = () => {
+    dispatch(addProduct(product));
+    setProduct('');
+  };
+
   return (
     <>
+    <p>
+      상품 추가: 
       <input
         type='text'
         value={product}
         onChange={(e) => setProduct(e.target.value)}
         onKeyUp={(e) => {
           if (e.key === 'Enter') {
-            
+            handleAddProduct();
           }
         }}
       />
       <button
         type='button'
-        onClick={() => dispatch(addProduct(product))}
+        onClick={handleAddProduct}
       >
-        상품 추가
+        추가
       </button>
+    </p>
+    <p>
+      상품 목록
       <ul>
         {items.map(item => <li>{item}</li>)}
       </ul>
+    </p>
     </>
   );
 }
