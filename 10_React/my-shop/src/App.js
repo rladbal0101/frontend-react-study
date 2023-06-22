@@ -1,8 +1,12 @@
 import { createGlobalStyle } from "styled-components";
-import 'bootstrap/dist/css/bootstrap.min.css'; // bootstrap CSS 추가
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
-import Header from "./pages/Header";
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+
+import 'bootstrap/dist/css/bootstrap.min.css'; // bootstrap CSS 추가
+import 'react-toastify/dist/ReactToastify.min.css'; // ReactToastify CSS 추가
+
+import Header from "./pages/Header";
 import Main from "./pages/Main";
 import ProductDetail from "./pages/ProductDetail";
 
@@ -61,6 +65,14 @@ function App() {
           <Route path="/detail/:productId" element={<ProductDetail />} />
         </Route>
       </Routes>
+
+      <ToastContainer
+        position="bottom-right"
+        autoClose={3000}
+        pauseOnFocusLoss={false} // 기본값은 true
+        theme="dark"
+        limit={3}
+      />
     </>
   );
 }
