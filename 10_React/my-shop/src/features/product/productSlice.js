@@ -41,6 +41,9 @@ const productSlice = createSlice({
       // console.log('Slice 실행');
       state.productList.push(...action.payload);
     },
+    clearSelectedProduct: (state) => {
+      state.selectedProduct = null;
+    }
   },
   // thunk를 이용한 비동기적인 작업에는 extraReducers를 사용
   // (참고)
@@ -61,7 +64,7 @@ const productSlice = createSlice({
   }
 });
 
-export const { getAllProducts, getSelectedProduct, getMoreProducts } = productSlice.actions;
+export const { getAllProducts, getSelectedProduct, getMoreProducts, clearSelectedProduct } = productSlice.actions;
 
 export const selectProductList = (state) => state.product.productList;
 export const selectselectedProduct = (state) => state.product.selectedProduct;

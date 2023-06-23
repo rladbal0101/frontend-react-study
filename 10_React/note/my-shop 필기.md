@@ -27,6 +27,8 @@ npm install react-bootstrap bootstrap styled-components react-router-dom @reduxj
 
   <!-- 숫자 포맷 -->
   https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl
+  ` const formatter = new Intl.NumberFormat('ko-KR', { style: 'currency', currency: 'KRW' }); `
+  ` 사용할 땐 => formatter.format(숫자) `
 
   <!-- Alert창 애니메이션 -->
   styled-conmponents 에서 keyframes 함수를 이용하여 애니메이션 효과 적용
@@ -112,3 +114,60 @@ npm install react-bootstrap bootstrap styled-components react-router-dom @reduxj
     : 배열의 인덱스 값으로 접근 
   - `3-2.` 객체 형태
     : 객체에 접근하려면 .으로 접근하지만 변수를 넣어주려면 대괄호 표기법을 사용
+
+  <!-- 상세 페이지가 언마운트 될 때 전역 상태 초기화 -->
+  상품을 눌렀을 때 상세 페이지 selectedProduct에 담기는데
+  화면이 언마운트되고(다른 페이지로 갔다가) 다시 상품을 눌렀을 때 전에 담긴 상품이 잠깐떴다가 사라짐(너무빨라서 눈으로 확인되진 않을 수 있음)
+
+  <productSlice>에 clearSelectedProduct 상태가 null로 초기화 되게 만들고 <ProductDetail>에서 뒷정리 함수로 가져다 사용함
+
+# Cart
+  장바구니 페이지
+  장바구니 정보를 담을 slice 만들기 <cartSlice>
+
+  <!-- cartList 반복 렌더링 -->
+  map함수를 사용하여 반복렌더링
+
+  <!-- 수량 변경 가능한 버튼 만들기 -->
+  수량 변경 리듀서 만들기
+
+  상품의 id를 payload에 실어 보냄
+  배열안에서 find()로 상품을 찾아
+  count값을 증가/감소 시키면 됨
+  * action 자리에 구조분해할당으로 별칭을 지어서 사용하는게 한눈에 보기 편함
+
+<!-- 장바구니 버튼을 눌렀을 때 장바구니에 담기게하기 -->
+<ProductDetail>에서 정보를 넘겨주고
+addItemToCart 리듀서 만들어 장바구니에 담기
+
+<!-- 장바구니 삭제버튼 -->
+<cartSlice>removeItemFromCart
+
+# ProductDetail
+<!-- 장바구니 이동 모달 -->
+cart 페이지로 가는 모달창 만들기
+
+<!-- 최근 본 상품 -->
+- useEffect > 해당 상품의 id값을 localStorage에 추가
+- parse를 이용하여 문자를 객체나 배열의 형태로 만듦
+  (처음에 null이니까 기본값으로 빈배열 넣어줌)
+- 중복 제거
+  1) id값을 넣기 전에 기존 배열에 존재하는지 검사하거나
+  2) 아니면 일단 넣고 Set 자료형을 이용하여 중복 제거(간편함)
+- Set 객체에 있는 값을 배열로 만들어줌
+- 만든 배열을 JSON 문자열로 변환
+
+- 최근 본 상품 띄워줄 컴포넌트 생성 <LatestView.js>
+ : 부트스트랩 이용하여 컴포넌트 생성 후 <Main.js>에 렌더링
+
+<LatestView.js>
+- 로컬스토리지에 저장되어있는 값을 가져와 JSON 문자열로 변환시켜 변수에 저장
+- 최근 본 상품 리스트를 찾아와 변수에 저장(처음 새로고침 시 한번은 빈 배열)
+
+- 만약 저장된 값이 없거나, 최근 본 상품이 없으면 렌더링 되지 않게 막기
+
+주의: key 속성은 가장 최상위 엘리먼트에 부여, <></>에는 사용 불가
+  생략하지 말고 다 적어줘야함
+  <React.Fragment key={product.id}></React.Fragment>
+
+※ 해당 상품의 id값을 localStorage에 저장하여 최근 본 상품을 찾아 배열로 만들어 렌더링하기

@@ -64,9 +64,9 @@ state 초기값으로 원시값, 배열, 객체 등 모든 데이터 타입 사�
   # createSlice() 함수
   : state이름, 초기값 설정, 액션 및 리듀서 함수를 만드는 것을 도와줌
     인자값으로 name, initialState, reducers 속성을 갖는 객체를 넣음
-  - name : state 이름
+  - name : 'state 이름'
   - initialState : state 초기값
-  - reducers: state를 변경하는 함수
+  - reducers: {state를 변경하는 함수}
     state를 변경하는 함수(reducer)들을 정의하고 관련 action을 생성
     현재 state와 action 객체를 파라미터로 받아오고 필요한 경우 상태를 업데이트하고 새 상태를 반환하는 함수
 
