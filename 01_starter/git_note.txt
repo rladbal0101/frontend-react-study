@@ -127,5 +127,6 @@ https://ujuc.github.io/2015/12/16/git-flow-github-flow-gitlab-flow/
 - 브랜치 이동하기(체크하기)
 > git checkout feature/login
 
-> git add
+> git add . (. 은 모든 파일)
 > git commit -m "로그인 기능 개발"
+> git push
