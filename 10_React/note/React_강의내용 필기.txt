@@ -430,3 +430,20 @@ Redux Toolkit and React-Redux 설치하기
 
 #230621
 #새 프로젝트 시작(my-shop)
+
+--------------------------------------------------------------------------------
+**새 프로젝트 시작할 때**
+> npx create-react-app 'project-name'
+
+# 설치 패키지
+> npm install styled-reset styled-components@5.3.11 react-router-dom react-icons react-bootstrap bootstrap @reduxjs/toolkit react-redux axios react-toastify
+
+* axios
+  외부 라이브러리(제일 많이 씀)
+- 기본 사용법
+  axios.get('url').then(); // axios.get('url')의 결과가 Promise 객체 => Promise.then();
+
+* react-toastify
+  사용자에게 알림창 띄우기
+  > react-toastify 사용시 꼭 CSS import 해야함(min.css 확인!)
+  (import 'react-toastify/dist/ReactToastify.min.css';)
